@@ -10,32 +10,31 @@ body{
     font-weight: 600;
 }
 
-/* Linea lateral en opciones */
-  .nav-link {
-    position: relative;
-    text-decoration: none;
-    color: black; /* Ajusta el color según tu diseño */
-    display: inline-block; /* Restringe el tamaño al contenido */
-  }
-  
-  .nav-link span {
-    position: relative;
-  }
-  
-  .nav-link span::after {
-    content: '';
-    position: absolute;
-    bottom: 0; /* Ubica la línea en la parte inferior del texto */
-    left: 0;
-    width: 0;
-    height: 2px; /* Grosor del subrayado */
-    background-color: #000000; /* Color del subrayado */
-    transition: width 0.3s ease; /* Transición suave */
-  }
-  
-  .nav-link:hover span::after {
-    width: 100%; /* Se expande al 100% del texto */
-  }
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: black; /* Ajusta el color según tu diseño */
+  display: inline-block; /* Restringe el tamaño al contenido */
+}
+
+.nav-link span {
+  position: relative;
+}
+
+.nav-link span::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Ubica la línea en la parte inferior del texto */
+  left: 0;
+  width: 0;
+  height: 2px; /* Grosor del subrayado */
+  background-color: #000000; /* Color del subrayado */
+  transition: width 0.3s ease; /* Transición suave */
+}
+
+.nav-link:hover span::after {
+  width: 100%; /* Se expande al 100% del texto */
+}
 
   /* CardPresentacion */
 
