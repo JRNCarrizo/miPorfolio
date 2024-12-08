@@ -21,6 +21,11 @@ fetch('sobreMi.html')
 .then(data => {
     document.getElementById('sobreMi').innerHTML = data;
 });
+fetch('proyectos.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('proyectos').innerHTML = data;
+});
 
 
   
