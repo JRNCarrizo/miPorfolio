@@ -1,10 +1,11 @@
 body{
     margin-top: 55px;
-    background-color: #797979;
+    background-color: #aeaeae;
 }
 
 .custom-navbar{
     background: linear-gradient(135deg, #eeeeee, #ff0a0a);  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 .letraNegrita{
@@ -171,9 +172,9 @@ body{
   margin: 20px auto; /* Centrando la tarjeta y añadiendo separación */
   transition: transform 0.2s;
 }
-.cardSobreMi:hover {
-  transform: scale(1.02);
-}
+ /* .cardSobreMi:hover {
+  transform: scale(1.02); 
+} */
 h2 {
   color: #333;
 }
@@ -199,9 +200,45 @@ p {
 
 /* Proyectos */
 
+.containerCard{
+  overflow: visible;
+}
+
+.card {
+  width: 80%; /* Predeterminado */
+  max-width: 500px; /* Límite para pantallas grandes */
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Sombra sutil */
+  
+}
+
+.card:hover{
+  transform: scale(1.05); 
+  transition: transform 0.3s ease;
 
 
+}
 
+.card img {
+  width: 100%;
+  height: 60%; /* Mantener proporción de imagen */
+  object-fit: cover;
+  transition: transform 0.3s ease; /* Cambia suavemente en ambos sentidos */
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 90%; /* Más ancho para pantallas pequeñas */
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: 95%; /* Aún más ancho para pantallas muy pequeñas */
+    height: auto;
+  }
+}
 
 
 
