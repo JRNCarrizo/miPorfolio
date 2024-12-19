@@ -201,7 +201,9 @@ p {
 /* Proyectos */
 
 .containerCard{
-  overflow: visible;
+  position: relative;
+  box-sizing: border-box;
+  padding: 30px;
 }
 
 .card {
