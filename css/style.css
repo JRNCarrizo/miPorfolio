@@ -1,11 +1,13 @@
 body{
     margin-top: 55px;
-    background-color: #aeaeae;
+    background-color: #c9c9c9;
+    overflow-x: hidden;
 }
 
 .custom-navbar{
     background: linear-gradient(135deg, #eeeeee, #ff0a0a);  
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    
 }
 
 .letraNegrita{
@@ -41,6 +43,7 @@ body{
   /* CardPresentacion */
 
 .dynamic-background {
+  
   background: linear-gradient(45deg, #ff6c6c, #ffffff, #ff6565, #ffffff);
   background-size: 400% 400%;
   animation: gradientAnimation 10s ease infinite;
@@ -135,6 +138,8 @@ body{
 
 /* botones debajo de la descripcion */
 .custom-button {
+  text-decoration: none; /* Elimina el subrayado */
+
     background-color: #fff; /* Color blanco */
     color: #333; /* Color del texto */
     border: 2px solid #ddd; /* Borde gris claro */
@@ -176,7 +181,7 @@ body{
   transform: scale(1.02); 
 } */
 h2 {
-  color: #333;
+  color: #000000;
 }
 p {
   color: #555;
@@ -242,6 +247,100 @@ p {
   }
 }
 
+/* formulario mail */
+/* formulario mail */
+#form {
+  display: flex; /* Usamos flexbox para el formulario */
+  flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
+  justify-content: center; /* Centra los elementos */
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+.inputForm {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  width: calc(50% - 20px); /* Ancho del 50% menos margen para pantallas grandes */
+  box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}
+
+.inputForm:focus {
+  border-color: #dc0000; /* Cambia el color del borde al enfocar */
+  outline: none; /* Elimina el contorno predeterminado */
+}
+
+.inputText {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  width: calc(100% - 40px); /* Ancho responsivo con margen */
+  margin: 10px auto; /* Centrado automático */
+  box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}
+
+.inputText:focus {
+  border-color: #dc0000; /* Cambia el color del borde al enfocar */
+  outline: none; /* Elimina el contorno predeterminado */
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .inputForm {
+      width: calc(100% - 40px); /* Ancho completo en pantallas más pequeñas */
+    margin: 10px;
+  }
+}
+
+.botonForm {
+  display: flex;
+  justify-content: center; /* Centra el botón */
+  margin-top: 3px; /* Espacio superior */
+  margin-bottom: 50px;
+}
+
+.titulos{
+  color: #ffffff;
+}
+
+/* Info final */
+
+.containerInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.contact-info {
+  display: flex;
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  max-width: 1200px; /* Ancho máximo para evitar que se estire demasiado */
+  padding: 0 20px; /* Espacio interior */
+  text-align: center; /* Centrar texto */
+}
+.contact-info div {
+  flex: 1; /* Hace que cada div ocupe el mismo espacio */
+  margin: 0 20px; /* Margen entre los elementos */
+}
+
+/* Consulta de medios para pantallas pequeñas */
+@media (max-width: 768px) {
+  .contact-info {
+      flex-direction: column; /* Cambiar a columna */
+      align-items: center; /* Centrar elementos en la columna */
+  }
+  .contact-info div {
+      margin: 10px 0; /* Margen vertical entre elementos */
+  }
+  .containerInfo{
+    height: 40vh;
+  }
+}
 
 
 
