@@ -342,6 +342,12 @@ p {
   }
 }
 
+/* indicador carrusel */
+
+.carousel-indicators {
+  bottom: -20px; /* Ajusta este valor según tus necesidades */
+  margin-bottom: 20px;
+}
 
 
 
