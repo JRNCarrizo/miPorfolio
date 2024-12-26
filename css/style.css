@@ -348,6 +348,14 @@ p {
   bottom: -20px; /* Ajusta este valor según tus necesidades */
   margin-bottom: 20px;
 }
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(255, 14, 14, 0.5); /* Fondo semitransparente para mejor visibilidad */
+  border-radius: 50%; /* Forma circular */
+}
+
 
 
 
