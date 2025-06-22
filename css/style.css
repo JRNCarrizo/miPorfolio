@@ -4,10 +4,10 @@ body{
     overflow-x: hidden;
 }
 
+/* Estilos de la barra de navegación */
 .custom-navbar{
     background: linear-gradient(135deg, #ffffff, #03678e);  
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-    
 }
 
 .letraNegrita{
@@ -17,33 +17,32 @@ body{
 .nav-link {
   position: relative;
   text-decoration: none;
-  color: black; /* Ajusta el color según tu diseño */
-  display: inline-block; /* Restringe el tamaño al contenido */
+  color: black;
+  display: inline-block;
 }
 
 .nav-link span {
   position: relative;
 }
 
+/* Efecto de subrayado animado para los enlaces de navegación */
 .nav-link span::after {
   content: '';
   position: absolute;
-  bottom: 0; /* Ubica la línea en la parte inferior del texto */
+  bottom: 0;
   left: 0;
   width: 0;
-  height: 2px; /* Grosor del subrayado */
-  background-color: #000000; /* Color del subrayado */
-  transition: width 0.3s ease; /* Transición suave */
+  height: 2px;
+  background-color: #000000;
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover span::after {
-  width: 100%; /* Se expande al 100% del texto */
+  width: 100%;
 }
 
-  /* CardPresentacion */
-
+/* Fondo dinámico con animación de gradiente */
 .dynamic-background {
-  
   background: linear-gradient(45deg, #03678e, #ffffff, #03678e, #ffffff);
   background-size: 400% 400%;
   animation: gradientAnimation 10s ease infinite;
@@ -60,200 +59,256 @@ body{
     background-position: 0% 50%;
   }
 }
-/* Marco container general  */
+
+/* Marco container general */
 .card-container {
-    border: 1px solid #ddd; /* Borde de la tarjeta */
-    padding: 20px; /* Espacio interno */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    background-color: #fff; /* Fondo blanco */
-  }
-
-/* img */
-
-.container {
-    display: flex;
-    justify-content: flex-start; /* Alinea a la izquierda por defecto */
-    height: 90vh;                /* Asegura que ocupe toda la altura de la pantalla */
-    border: 1px solid #020101; /* Borde de la tarjeta */
-    padding-top: 20px; /* Espacio interno */ 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Sombra sutil */
-    background-color: #fff; /* Fondo blanco */
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 }
 
+/* Contenedor principal para elementos principales */
+.container {
+    display: flex;
+    justify-content: flex-start;
+    height: 90vh;
+    border: 1px solid #020101;
+    padding-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    background-color: #fff;
+}
+
+/* Estilo para imágenes circulares */
 .img-round {
-    width: 300px; /* Ajusta el tamaño */
-    height: 300px; /* Ajusta el tamaño */
-    border-radius: 50%; /* Hace la imagen redonda */
-    object-fit: cover; /* Mantiene la proporción sin deformar */
-    border: 5px solid #414141; /* Borde alrededor de la imagen */
-    position: relative; /* Necesario para mover la imagen si es necesario */
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #414141;
+    position: relative;
     margin-left: 90px;
 }
 
-/* Media Query para pantallas pequeñas */
+/* Adaptación responsive para pantallas medianas */
 @media (max-width: 1024px) {
     .container {
-        text-align: center; /* Asegura que el texto dentro del contenedor también esté centrado */
+        text-align: center;
         height: 80vh;
     }
 
     .img-round {
-        width: 200px; /* Ajusta el tamaño */
-        height: 200px; /* Ajusta el tamaño */
-         
+        width: 200px;
+        height: 200px;
     }
 }
-/* Media Query para pantallas pequeñas */
+
+/* Adaptación responsive para pantallas pequeñas */
 @media (max-width: 768px) {
     .container {
-        text-align: center; /* Centra el contenedor */
+        text-align: center;
         height: 100vh;
-        padding-top:50px; /* Espacio interno */
+        padding-top:50px;
     }
 
     .img-round {       
-        width: 200px; /* Ajusta el tamaño */
-        height: 200px; /* Ajusta el tamaño */
+        width: 200px;
+        height: 200px;
         margin: 0 auto;
     }
 }
 
-/* Botones debajo de la imagen */
+/* Contenedor para botones */
 .button-container {
     display: flex;
-    justify-content: center; /* Centra los botones */
-    gap: 10px; /* Espacio entre los botones */
+    justify-content: center;
+    gap: 10px;
 }
 
-/* Icono debajo del la foto */
+/* Estilo para iconos con hover */
 .icono-style { 
     color: #000000;
-  }
-  .icono-style:hover {
-    color: #797979; /* Cambia el color cuando el cursor pasa sobre el ícono */
-  }
+}
+.icono-style:hover {
+    color: #797979;
+}
+
 .icon-container{
     transform: translate(50px, 0);
 }
 
-/* botones debajo de la descripcion */
+/* Botones personalizados con animación */
 .custom-button {
-  text-decoration: none; /* Elimina el subrayado */
-
-    background-color: #fff; /* Color blanco */
-    color: #333; /* Color del texto */
-    border: 2px solid #ddd; /* Borde gris claro */
-    border-radius: 30px; /* Bordes redondeados */
-    padding: 10px 20px; /* Tamaño del botón */
-    font-size: 16px; /* Tamaño del texto */
-    transition: all 0.3s ease; /* Transición suave */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    text-decoration: none;
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    align-items: center; /* Alinea verticalmente el texto y el ícono */
-    gap: 8px; /* Espacio entre el texto y el ícono */
+    align-items: center;
+    gap: 8px;
 }
 
 .custom-button:hover {
-    background-color: #f8f9fa; /* Color al pasar el cursor */
-    color: #000; /* Cambia el color del texto */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más intensa */
-    transform: scale(1.05); /* Ligeramente más grande */
+    background-color: #f8f9fa;
+    color: #000;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
 }
 
 .custom-button:active {
-    background-color: #e9ecef; /* Color al presionar */
-    color: #333; /* Texto más oscuro */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más tenue */
-    transform: scale(0.95); /* Ligeramente más pequeño */
+    background-color: #e9ecef;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(0.95);
 }
 
-/* Card Sobre mi */
+/* Card para sección Sobre Mi */
 .cardSobreMi {
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
   padding: 20px;
-  max-width: 1100px; /* Ancho máximo de la tarjeta */
-  margin: 20px auto; /* Centrando la tarjeta y añadiendo separación */
+  max-width: 1100px;
+  margin: 20px auto;
   transition: transform 0.2s;
 }
- /* .cardSobreMi:hover {
-  transform: scale(1.02); 
-} */
+
 h2 {
   color: #000000;
 }
 p {
   color: #555;
 }
+
 @media (max-width: 600px) {
   .cardSobreMi {
-      padding: 15px;
-      margin: 10px; /* Menos margen en pantallas pequeñas */
+    padding: 15px;
+    margin: 10px;
   }
 }
-/* Iconos habilidades */
+
+/* Iconos de habilidades con animación hover */
 .icon-Habilidades{
-  width: 50px; /* Ajusta el tamaño según lo necesites */
-            height: auto; /* Mantener la proporción */
-            margin: 30px; /* Espaciado entre iconos */
-            transition: transform 0.3s ease; /* Suaviza la transición */  
+  width: 50px;
+  height: auto;
+  margin: 30px;
+  transition: transform 0.3s ease;  
 }
 .icon-Habilidades:hover {
-  transform: scale(1.2); /* Aumenta el tamaño al pasar el cursor */
+  transform: scale(1.2);
 }
 
-/* Proyectos */
-
-.containerCard{
+/* PROYECTOS - CARRUSEL MODIFICADO */
+/* filepath: c:\Users\Usuario\Desktop\RemotosProyectos\miPorfolio\css\style.css */
+/* PROYECTOS - CARRUSEL MODIFICADO */
+.containerCard {
   position: relative;
   box-sizing: border-box;
   padding: 30px;
 }
 
+/* Card de proyectos mejorada */
 .card {
-  width: 80%; /* Predeterminado */
-  max-width: 500px; /* Límite para pantallas grandes */
-  height: auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Sombra sutil */
-  
+  width: 90%; /* Aumentado para mayor tamaño */
+  max-width: 800px; /* Límite aumentado para pantallas grandes */
+  height: 80vh; /* Altura aumentada para cards más grandes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+  margin: 0 auto; /* Centrado */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
 }
 
 .card:hover{
-  transform: scale(1.05); 
-  transition: transform 0.3s ease;
-
-
+  transform: scale(1.03);
 }
 
+/* Imagen de la card optimizada - AUMENTADA */
 .card img {
   width: 100%;
-  height: 60%; /* Mantener proporción de imagen */
+  height: 60%; /* Aumentado del 45% al 60% para imágenes más altas */
   object-fit: cover;
-  transition: transform 0.3s ease; /* Cambia suavemente en ambos sentidos */
+  object-position: top; /* Enfoca la parte superior de la imagen */
 }
 
+/* Contenedor para el scroll */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  height: 40%; /* Reducido al 40% para dar más espacio a la imagen */
+  overflow: hidden; /* Importante para que no desborde */
+  padding: 15px; /* Padding aumentado */
+}
+
+/* Título del proyecto */
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Contenedor con scroll para el texto */
+.card-text {
+  overflow-y: auto; /* Añade scroll vertical */
+  flex-grow: 1; /* Ocupa todo el espacio disponible */
+  padding: 0 5px 5px 5px;
+  text-align: left; /* Alineación de texto a la izquierda */
+}
+
+/* Ajustes responsivos para las cards */
 @media (max-width: 768px) {
   .card {
-    width: 90%; /* Más ancho para pantallas pequeñas */
-    height: auto;
+    width: 95%;
+    height: 80vh; /* Mantener alto para móviles */
+  }
+  
+  .card img {
+    height: 50%; /* Ligeramente menor en móviles */
+  }
+  
+  .card-body {
+    height: 50%;
   }
 }
 
 @media (max-width: 576px) {
   .card {
-    width: 95%; /* Aún más ancho para pantallas muy pequeñas */
-    height: auto;
+    width: 98%;
+    height: 75vh;
+  }
+
+  
+  .card img {
+    height: 35%;
   }
 }
 
-/* formulario mail */
+/* Controles del carrusel mejorados */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(0, 24, 89, 0.5);
+  border-radius: 50%;
+}
+
+/* Indicadores de carrusel reposicionados */
+.carousel-indicators {
+  bottom: -20px;
+  margin-bottom: 20px;
+}
+
 /* formulario mail */
 #form {
-  display: flex; /* Usamos flexbox para el formulario */
-  flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
-  justify-content: center; /* Centra los elementos */
-  gap: 20px; /* Espacio entre los elementos */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .inputForm {
@@ -262,13 +317,13 @@ p {
   border-radius: 15px;
   font-size: 16px;
   transition: border-color 0.3s;
-  width: calc(50% - 20px); /* Ancho del 50% menos margen para pantallas grandes */
-  box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+  width: calc(50% - 20px);
+  box-sizing: border-box;
 }
 
 .inputForm:focus {
-  border-color: #dc0000; /* Cambia el color del borde al enfocar */
-  outline: none; /* Elimina el contorno predeterminado */
+  border-color: #dc0000;
+  outline: none;
 }
 
 .inputText {
@@ -277,28 +332,27 @@ p {
   border-radius: 15px;
   font-size: 16px;
   transition: border-color 0.3s;
-  width: calc(100% - 40px); /* Ancho responsivo con margen */
-  margin: 10px auto; /* Centrado automático */
-  box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+  width: calc(100% - 40px);
+  margin: 10px auto;
+  box-sizing: border-box;
 }
 
 .inputText:focus {
-  border-color: #dc0000; /* Cambia el color del borde al enfocar */
-  outline: none; /* Elimina el contorno predeterminado */
+  border-color: #dc0000;
+  outline: none;
 }
 
-/* Media Query para pantallas más pequeñas */
 @media (max-width: 768px) {
   .inputForm {
-      width: calc(100% - 40px); /* Ancho completo en pantallas más pequeñas */
+    width: calc(100% - 40px);
     margin: 10px;
   }
 }
 
 .botonForm {
   display: flex;
-  justify-content: center; /* Centra el botón */
-  margin-top: 3px; /* Espacio superior */
+  justify-content: center;
+  margin-top: 3px;
   margin-bottom: 50px;
 }
 
@@ -307,7 +361,6 @@ p {
 }
 
 /* Info final */
-
 .containerInfo {
   display: flex;
   justify-content: center;
@@ -315,75 +368,54 @@ p {
   margin: 0;
   font-family: Arial, sans-serif;
 }
+
 .contact-info {
   display: flex;
-  justify-content: space-between; /* Distribuye el espacio entre los elementos */
-  width: 100%; /* Ocupa todo el ancho disponible */
-  max-width: 1200px; /* Ancho máximo para evitar que se estire demasiado */
-  padding: 0 20px; /* Espacio interior */
-  text-align: center; /* Centrar texto */
-}
-.contact-info div {
-  flex: 1; /* Hace que cada div ocupe el mismo espacio */
-  margin: 0 20px; /* Margen entre los elementos */
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  text-align: center;
 }
 
-/* Consulta de medios para pantallas pequeñas */
+.contact-info div {
+  flex: 1;
+  margin: 0 20px;
+}
+
 @media (max-width: 768px) {
   .contact-info {
-      flex-direction: column; /* Cambiar a columna */
-      align-items: center; /* Centrar elementos en la columna */
+    flex-direction: column;
+    align-items: center;
   }
   .contact-info div {
-      margin: 10px 0; /* Margen vertical entre elementos */
+    margin: 10px 0;
   }
   .containerInfo{
     height: 50vh;
   }
 }
 
-/* indicador carrusel */
-
-.carousel-indicators {
-  bottom: -20px; /* Ajusta este valor según tus necesidades */
-  margin-bottom: 20px;
-}
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  width: 3rem;
-  height: 3rem;
-  background-color: rgba(0, 24, 89, 0.5); /* Fondo semitransparente para mejor visibilidad */
-  border-radius: 50%; /* Forma circular */
-}
-
-/* letras */
-
-
-/* Tarjeta titulo */
+/* Estilos para tipografías */
 .tourney{
   font-family: "Tourney", serif;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-    color: #000000;
-      text-shadow: 2px 2px #c0c0c0; /* Sombra roja desplazada 2px a la derecha y 2px hacia abajo */
-    }
+  font-variation-settings: "wdth" 100;
+  color: #000000;
+  text-shadow: 2px 2px #c0c0c0;
+}
     
-/* Letras descripcion titulo */
 .anta-regular {
   font-family: "Anta", serif;
   font-weight: 400;
   font-style: normal;
   color: #000;
 }
-/* botones y titulos */
+
 .keania-one-regular {
   font-family: "Keania One", serif;
   font-weight: 400;
   font-style: normal;
-  
 }
-
-
