@@ -1,0 +1,57 @@
+{
+  "title": "Tecnologías con las que trabajo",
+  "intro": "Desarrollo soluciones completas, desde el backend hasta la interfaz de usuario, incluyendo aplicaciones web, de escritorio y móviles.",
+  "categories": [
+    {
+      "id": "backend",
+      "name": "Backend",
+      "items": [
+        "Java",
+        "Spring Boot",
+        "Spring Security",
+        "JPA / Hibernate",
+        "REST APIs"
+      ]
+    },
+    {
+      "id": "frontend",
+      "name": "Frontend",
+      "items": [
+        "React",
+        "JavaScript",
+        "TypeScript",
+        "HTML5",
+        "CSS3"
+      ]
+    },
+    {
+      "id": "desktop-mobile",
+      "name": "Escritorio y móvil",
+      "items": [
+        "Electron",
+        "Capacitor"
+      ]
+    },
+    {
+      "id": "databases",
+      "name": "Bases de datos",
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "SQLite"
+      ]
+    },
+    {
+      "id": "tools",
+      "name": "Herramientas",
+      "items": [
+        "Git",
+        "GitHub",
+        "Cursor",
+        "Postman",
+        "Vite",
+        "Python"
+      ]
+    }
+  ]
+}

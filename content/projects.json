@@ -1,0 +1,92 @@
+{
+  "label": "Proyectos",
+  "title": "Soluciones desarrolladas para resolver problemas reales",
+  "intro": "Cada proyecto nace de una necesidad concreta: optimizar procesos, automatizar tareas y facilitar el trabajo de las personas. Desde sistemas de conciliación bancaria y control de stock hasta aplicaciones de escritorio, plataformas de gestión y herramientas móviles, mi enfoque está puesto en crear software confiable, intuitivo y preparado para crecer.",
+  "projects": [
+    {
+      "id": "vinosderemate",
+      "title": "Vinos de Remate",
+      "summary": "Catálogo web con pedidos por WhatsApp y panel Electron para stock y pedidos: el stock se descuenta solo en la página. Incluye Gemini para completar fichas de producto y quitado automático de fondo en fotos.",
+      "description": "Solución completa de catálogo y venta: la web pública permite armar el pedido y enviarlo por WhatsApp. Una plataforma de escritorio en Electron gestiona stock y pedidos, sincronizando y descontando automáticamente el inventario publicado. Integración con Gemini para completar información de productos y herramienta de remoción automática de fondo para preparar imágenes de publicación.",
+      "stack": ["Electron", "React", "Vite", "Gemini AI", "WhatsApp"],
+      "image": "",
+      "demoUrl": "https://vinosderemate.netlify.app/",
+      "repoUrl": "",
+      "featured": true,
+      "order": 1
+    },
+    {
+      "id": "conciliacion",
+      "title": "Conciliación bancaria",
+      "summary": "Sistema empresarial para cruzar movimientos bancarios y asientos contables, reduciendo errores manuales y acelerando el cierre diario.",
+      "description": "Plataforma de conciliación bancaria orientada a operaciones reales de empresa: importación de extractos, matching de movimientos, alertas de diferencias y reportes para el área financiera.",
+      "stack": ["Java", "Spring Boot", "SQL", "React"],
+      "image": "",
+      "demoUrl": "",
+      "repoUrl": "",
+      "featured": true,
+      "order": 2
+    },
+    {
+      "id": "stock",
+      "title": "Stock e inventario móvil",
+      "summary": "Plataforma de inventario con dispositivos celulares para cargar, consultar y sincronizar stock en tiempo real desde el depósito o el piso de venta.",
+      "description": "Sistema de control de stock e inventario con app móvil (Capacitor) para operarios: altas, bajas, transferencias y consultas en campo, conectadas a un backend centralizado.",
+      "stack": ["React", "Capacitor", "Java", "SQL"],
+      "image": "",
+      "demoUrl": "",
+      "repoUrl": "",
+      "featured": true,
+      "order": 3
+    },
+    {
+      "id": "multicam",
+      "title": "Estudio multicámara móvil",
+      "summary": "App de escritorio tipo estudio de grabación: filma con varios celulares a la vez y coordina tomas multicámara desde una sola consola.",
+      "description": "Plataforma Electron para dirigir una sesión multicámara usando smartphones como cámaras. Control centralizado de grabación, sincronización y flujo de trabajo pensado para producción ágil.",
+      "stack": ["Electron", "React", "Capacitor", "JavaScript"],
+      "image": "",
+      "demoUrl": "",
+      "repoUrl": "",
+      "featured": true,
+      "order": 4
+    },
+    {
+      "id": "plansalir",
+      "title": "PlanSalir",
+      "summary": "Plataforma social para crear y descubrir eventos, con geolocalización, fotos, comentarios y notificaciones.",
+      "description": "App full stack con autenticación (tradicional y Google OAuth), gestión de eventos, interacción social, mapas con OpenStreetMap y notificaciones en tiempo casi real.",
+      "stack": ["Java", "Spring Boot", "React"],
+      "image": "images/plansalir.png",
+      "demoUrl": "https://plansalir.netlify.app/",
+      "repoUrl": "",
+      "featured": true,
+      "order": 5
+    },
+    {
+      "id": "malestar",
+      "title": "Web promocional de banda",
+      "summary": "Sitio para una banda: galería, fechas de shows e integración con redes para impulsar la presencia online.",
+      "description": "Página web promocional con galería de imágenes y videos, calendario de conciertos e integración con redes sociales.",
+      "stack": ["HTML", "CSS", "JavaScript"],
+      "image": "images/malestar.png",
+      "demoUrl": "https://drmalestar.netlify.app/",
+      "repoUrl": "",
+      "featured": false,
+      "order": 6
+    },
+    {
+      "id": "clima",
+      "title": "Pronóstico del tiempo",
+      "summary": "App web de clima con búsqueda por ciudad, datos actuales y pronóstico a partir de APIs meteorológicas.",
+      "description": "Consumo de APIs meteorológicas con Axios: temperatura, humedad, viento y presión, con búsqueda por ciudad o ubicación.",
+      "stack": ["HTML", "CSS", "JavaScript"],
+      "image": "images/clima.png",
+      "demoUrl": "https://pronosticoclima.netlify.app/",
+      "repoUrl": "",
+      "featured": false,
+      "order": 7
+    }
+  ]
+}
+

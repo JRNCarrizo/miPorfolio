@@ -1,0 +1,25 @@
+{
+  "name": "portfolio-admin",
+  "private": true,
+  "version": "1.0.0",
+  "description": "CMS local Electron para editar y publicar el portfolio",
+  "main": "electron/main.cjs",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k \"vite\" \"wait-on tcp:5174 && electron .\"",
+    "build": "vite build",
+    "start": "electron ."
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "simple-git": "^3.28.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.4",
+    "concurrently": "^9.2.1",
+    "electron": "^37.2.6",
+    "vite": "^8.2.0",
+    "wait-on": "^8.0.5"
+  }
+}

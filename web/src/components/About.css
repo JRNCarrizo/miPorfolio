@@ -1,0 +1,33 @@
+.about__text {
+  max-width: 42rem;
+  color: var(--ink-soft);
+  font-size: 1.08rem;
+  margin: 0 0 1.1rem;
+}
+
+.about__objectives-block {
+  max-width: 42rem;
+  margin: 2rem 0 0;
+  padding: 1.4rem 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.about__objectives-title {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--accent-deep);
+}
+
+.about__objectives {
+  margin: 0 0 0.95rem;
+  color: var(--ink);
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.about__objectives:last-child {
+  margin-bottom: 0;
+}
