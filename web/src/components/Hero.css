@@ -247,32 +247,46 @@
 @media (max-width: 860px) {
   .hero {
     align-items: end;
+    min-height: 100vh;
+    min-height: 100dvh;
   }
 
   .hero__photo-plane {
     width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: auto;
+    height: min(52vh, 420px);
   }
 
   .hero__photo {
-    object-position: center 32%;
+    object-position: center 28%;
   }
 
   .hero__code {
-    inset: 10% 6% 18%;
+    inset: 12% 6% 14%;
+  }
+
+  .hero__swap {
+    bottom: 0.75rem;
+    right: 0.75rem;
   }
 
   .hero__veil {
     background: linear-gradient(
       180deg,
-      rgba(7, 19, 26, 0.2) 0%,
-      rgba(7, 19, 26, 0.45) 35%,
-      rgba(7, 19, 26, 0.92) 72%,
+      rgba(7, 19, 26, 0.05) 0%,
+      rgba(7, 19, 26, 0.15) 28%,
+      rgba(7, 19, 26, 0.88) 52%,
+      #07131a 62%,
       #07131a 100%
     );
   }
 
   .hero__content {
-    padding-bottom: 2.5rem;
+    padding-top: calc(min(52vh, 420px) - 1.5rem);
+    padding-bottom: 2rem;
   }
 
   .hero__copy {
