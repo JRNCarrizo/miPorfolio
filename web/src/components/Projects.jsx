@@ -1,4 +1,5 @@
 import { useReveal } from '../hooks/useReveal'
+import Typewriter from './Typewriter'
 import './Projects.css'
 
 function contentUrl(path) {
@@ -9,14 +10,15 @@ function contentUrl(path) {
 export default function Projects({ projectsData }) {
   const { ref, visible } = useReveal(0.08)
   const projects = projectsData?.projects || []
+  const label = projectsData?.label || 'Proyectos'
+  const title =
+    projectsData?.title || 'Soluciones desarrolladas para resolver problemas reales'
 
   return (
     <section className="section projects" id="proyectos" ref={ref}>
       <div className={`container reveal ${visible ? 'visible' : ''}`}>
-        <p className="section-label">{projectsData?.label || 'Proyectos'}</p>
-        <h2 className="section-title">
-          {projectsData?.title || 'Soluciones desarrolladas para resolver problemas reales'}
-        </h2>
+        <Typewriter text={label} as="p" className="section-label" speed={42} />
+        <Typewriter text={title} as="h2" className="section-title" speed={20} startDelay={650} />
         <p className="section-lead section-lead--wide">
           {projectsData?.intro ||
             'Cada proyecto nace de una necesidad concreta: optimizar procesos, automatizar tareas y facilitar el trabajo de las personas.'}

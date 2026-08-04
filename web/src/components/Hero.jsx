@@ -6,6 +6,15 @@ function contentUrl(path) {
   return `/content/${path.replace(/^\//, '')}`
 }
 
+const FLOAT_LINES = [
+  'const app = createApp({ desktop: true })',
+  'await syncStock()',
+  'gemini.complete(product)',
+  'deploy("netlify") → ok',
+  'removeBackground(photo)',
+  'ship("idea → producto")',
+]
+
 const CODE_SNIPPET = `// Jorge Carrizo · Full Stack
 const stack = [
   "Java", "Spring", "React",
@@ -43,16 +52,52 @@ export default function Hero({ profile }) {
   const cvHref = contentUrl(profile.cvFile)
   const reducedMotion = usePrefersReducedMotion()
 
-  const [mode, setMode] = useState('photo') // photo | code
+  const [mode, setMode] = useState('photo') // photo | boot | code
   const [typed, setTyped] = useState('')
+  const [floatText, setFloatText] = useState('')
+  const [floatIndex, setFloatIndex] = useState(0)
   const [paused, setPaused] = useState(false)
 
+  // Código flotante sobre la foto (etapa foto)
+  useEffect(() => {
+    if (reducedMotion || paused || mode !== 'photo') return undefined
+
+    let cancelled = false
+    let timeouts = []
+    const wait = (ms) =>
+      new Promise((resolve) => {
+        const id = setTimeout(resolve, ms)
+        timeouts.push(id)
+      })
+
+    async function typeFloat() {
+      while (!cancelled) {
+        const line = FLOAT_LINES[floatIndex % FLOAT_LINES.length]
+        setFloatText('')
+        for (let i = 1; i <= line.length; i += 1) {
+          if (cancelled) return
+          setFloatText(line.slice(0, i))
+          await wait(28)
+        }
+        await wait(1400)
+        if (cancelled) return
+        setFloatIndex((n) => n + 1)
+      }
+    }
+
+    typeFloat()
+    return () => {
+      cancelled = true
+      timeouts.forEach(clearTimeout)
+    }
+  }, [reducedMotion, paused, mode, floatIndex])
+
+  // Ciclo foto → boot → ventana de código
   useEffect(() => {
     if (reducedMotion || paused) return undefined
 
     let cancelled = false
     let timeouts = []
-
     const wait = (ms) =>
       new Promise((resolve) => {
         const id = setTimeout(resolve, ms)
@@ -63,7 +108,11 @@ export default function Hero({ profile }) {
       while (!cancelled) {
         setMode('photo')
         setTyped('')
-        await wait(4200)
+        await wait(5200)
+        if (cancelled) break
+
+        setMode('boot')
+        await wait(700)
         if (cancelled) break
 
         setMode('code')
@@ -75,7 +124,7 @@ export default function Hero({ profile }) {
           await wait(CODE_SNIPPET[i - 1] === '\n' ? 45 : 16)
         }
 
-        await wait(2800)
+        await wait(3000)
         if (cancelled) break
       }
     }
@@ -92,30 +141,46 @@ export default function Hero({ profile }) {
     if (reducedMotion) return
     setPaused(true)
     setMode((current) => {
-      const next = current === 'photo' ? 'code' : 'photo'
-      if (next === 'code') setTyped(CODE_SNIPPET)
-      else setTyped('')
-      return next
+      if (current === 'code') {
+        setTyped('')
+        return 'photo'
+      }
+      setTyped(CODE_SNIPPET)
+      return 'code'
     })
-    // Reanuda el ciclo automático después de unos segundos
     window.setTimeout(() => setPaused(false), 6000)
   }
 
+  const planeClass = [
+    'hero__photo-plane',
+    mode === 'boot' ? 'hero__photo-plane--boot' : '',
+    mode === 'code' ? 'hero__photo-plane--code' : '',
+  ]
+    .filter(Boolean)
+    .join(' ')
+
   return (
     <section className="hero" id="top">
-      <div
-        className={`hero__photo-plane ${mode === 'code' ? 'hero__photo-plane--code' : ''}`}
-        aria-hidden={!imageSrc}
-      >
+      <div className={planeClass} aria-hidden={!imageSrc}>
         {imageSrc ? (
-          <img
-            src={`${imageSrc}?v=normal`}
-            alt=""
-            className="hero__photo"
-          />
+          <img src={`${imageSrc}?v=normal`} alt="" className="hero__photo" />
         ) : (
           <div className="hero__photo hero__photo--placeholder" />
         )}
+
+        <div className="hero__float" aria-hidden="true">
+          <div className="hero__float-chip">
+            <span className="hero__float-prompt">›</span>
+            <span>{floatText}</span>
+            {mode === 'photo' ? <span className="hero__caret hero__caret--inline" /> : null}
+          </div>
+          <div className="hero__float-tags">
+            <span>Java</span>
+            <span>React</span>
+            <span>Electron</span>
+            <span>Capacitor</span>
+          </div>
+        </div>
 
         <div className="hero__code" aria-hidden="true">
           <div className="hero__code-bar">
@@ -139,7 +204,7 @@ export default function Hero({ profile }) {
             onClick={toggleMode}
             aria-label={mode === 'photo' ? 'Ver código' : 'Ver foto'}
           >
-            {mode === 'photo' ? '</>' : 'Foto'}
+            {mode === 'code' ? 'Foto' : '</>'}
           </button>
         ) : null}
       </div>

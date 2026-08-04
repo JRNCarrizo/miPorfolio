@@ -1,4 +1,5 @@
 import { useReveal } from '../hooks/useReveal'
+import Typewriter from './Typewriter'
 import './Contact.css'
 
 function IconWhatsApp() {
@@ -79,10 +80,14 @@ export default function Contact({ profile }) {
   return (
     <section className="section contact" id="contacto" ref={ref}>
       <div className={`container reveal ${visible ? 'visible' : ''}`}>
-        <p className="section-label">Contacto</p>
-        <h2 className="section-title">
-          {profile.contactTitle || 'Conversemos sobre tu próximo proyecto'}
-        </h2>
+        <Typewriter text="Contacto" as="p" className="section-label" speed={42} />
+        <Typewriter
+          text={profile.contactTitle || 'Conversemos sobre tu próximo proyecto'}
+          as="h2"
+          className="section-title"
+          speed={22}
+          startDelay={650}
+        />
         <p className="section-lead section-lead--wide">
           {profile.contactIntro ||
             'Desarrollo soluciones a medida para empresas y profesionales.'}

@@ -52,40 +52,16 @@
       "order": 4
     },
     {
-      "id": "plansalir",
-      "title": "PlanSalir",
-      "summary": "Plataforma social para crear y descubrir eventos, con geolocalización, fotos, comentarios y notificaciones.",
-      "description": "App full stack con autenticación (tradicional y Google OAuth), gestión de eventos, interacción social, mapas con OpenStreetMap y notificaciones en tiempo casi real.",
-      "stack": ["Java", "Spring Boot", "React"],
-      "image": "images/plansalir.png",
-      "demoUrl": "https://plansalir.netlify.app/",
-      "repoUrl": "",
-      "featured": true,
-      "order": 5
-    },
-    {
       "id": "malestar",
-      "title": "Web promocional de banda",
-      "summary": "Sitio para una banda: galería, fechas de shows e integración con redes para impulsar la presencia online.",
-      "description": "Página web promocional con galería de imágenes y videos, calendario de conciertos e integración con redes sociales.",
+      "title": "Dr Malestar — sitio oficial",
+      "summary": "Sitio oficial de la banda con área pública para fans y panel de administración con login: desde ahí se publican shows, fotos y novedades sin tocar código.",
+      "description": "Web para Dr Malestar con dos caras: la página pública muestra identidad, galería, fechas y redes; y una sección de admin protegida con login permite cargar y publicar contenido de forma autónoma, manteniendo el sitio siempre actualizado.",
       "stack": ["HTML", "CSS", "JavaScript"],
-      "image": "images/malestar.png",
+      "image": "",
       "demoUrl": "https://drmalestar.netlify.app/",
       "repoUrl": "",
       "featured": false,
-      "order": 6
-    },
-    {
-      "id": "clima",
-      "title": "Pronóstico del tiempo",
-      "summary": "App web de clima con búsqueda por ciudad, datos actuales y pronóstico a partir de APIs meteorológicas.",
-      "description": "Consumo de APIs meteorológicas con Axios: temperatura, humedad, viento y presión, con búsqueda por ciudad o ubicación.",
-      "stack": ["HTML", "CSS", "JavaScript"],
-      "image": "images/clima.png",
-      "demoUrl": "https://pronosticoclima.netlify.app/",
-      "repoUrl": "",
-      "featured": false,
-      "order": 7
+      "order": 5
     }
   ]
 }

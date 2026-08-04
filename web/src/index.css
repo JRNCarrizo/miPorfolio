@@ -100,6 +100,34 @@ textarea {
   margin: 0 0 1rem;
 }
 
+.typewriter__caret {
+  display: inline-block;
+  width: 0.08em;
+  height: 0.95em;
+  margin-left: 0.12em;
+  vertical-align: -0.05em;
+  background: var(--accent);
+  animation: typeCaret 0.85s steps(1) infinite;
+}
+
+@keyframes typeCaret {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typewriter__caret {
+    animation: none;
+    display: none;
+  }
+}
+
 .section-lead {
   max-width: 36rem;
   color: var(--ink-soft);
