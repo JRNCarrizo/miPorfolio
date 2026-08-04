@@ -44,7 +44,7 @@
     },
     {
       "id": "stock",
-      "title": "Stock e inventario móvil",
+      "title": "ControlStock",
       "summary": "Plataforma de inventario con dispositivos celulares para cargar, consultar y sincronizar stock en tiempo real desde el depósito o el piso de venta.",
       "description": "Sistema de control de stock e inventario con app móvil (Capacitor) para operarios: altas, bajas, transferencias y consultas en campo, conectadas a un backend centralizado.",
       "stack": [
@@ -66,7 +66,7 @@
     },
     {
       "id": "multicam",
-      "title": "Estudio multicámara móvil",
+      "title": "Studio Live",
       "summary": "App de escritorio tipo estudio de grabación: filma con varios celulares a la vez y coordina tomas multicámara desde una sola consola.",
       "description": "Plataforma Electron para dirigir una sesión multicámara usando smartphones como cámaras. Control centralizado de grabación, sincronización y flujo de trabajo pensado para producción ágil.",
       "stack": [
@@ -86,6 +86,25 @@
       "image": "images/multicam-1.png"
     },
     {
+      "id": "aulamedia",
+      "title": "Aula Media",
+      "summary": "App de escritorio para docentes: prepara material audiovisual para la clase (video, audio y subtítulos) y lo organiza por carpetas listas para usar offline.",
+      "description": "Herramienta Electron pensada para el aula: permite armar y guardar material audiovisual didáctico —video, audio o subtítulos— y ordenarlo por carpetas según materia, unidad o clase. Facilita tener el contenido disponible offline, bien estructurado y listo para proyectar o compartir con el grupo.",
+      "stack": [
+        "Electron",
+        "JavaScript"
+      ],
+      "demoUrl": "",
+      "repoUrl": "",
+      "featured": true,
+      "order": 5,
+      "images": [
+        "images/aulamedia-1.png",
+        "images/aulamedia-2.png"
+      ],
+      "image": "images/aulamedia-1.png"
+    },
+    {
       "id": "malestar",
       "title": "Dr Malestar — sitio oficial",
       "summary": "Sitio oficial de la banda con área pública para fans y panel de administración con login: desde ahí se publican shows, fotos y novedades sin tocar código.",
@@ -98,7 +117,7 @@
       "demoUrl": "https://drmalestar.netlify.app/",
       "repoUrl": "",
       "featured": false,
-      "order": 5,
+      "order": 6,
       "images": [
         "images/malestar.png",
         "images/malestar-2.png",
