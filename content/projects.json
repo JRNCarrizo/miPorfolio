@@ -8,61 +8,91 @@
       "title": "Vinos de Remate",
       "summary": "Catálogo web con pedidos por WhatsApp y panel Electron para stock y pedidos: el stock se descuenta solo en la página. Incluye Gemini para completar fichas de producto y quitado automático de fondo en fotos.",
       "description": "Solución completa de catálogo y venta: la web pública permite armar el pedido y enviarlo por WhatsApp. Una plataforma de escritorio en Electron gestiona stock y pedidos, sincronizando y descontando automáticamente el inventario publicado. Integración con Gemini para completar información de productos y herramienta de remoción automática de fondo para preparar imágenes de publicación.",
-      "stack": ["Electron", "React", "Vite", "Gemini AI", "WhatsApp"],
-      "image": "",
+      "stack": [
+        "Electron",
+        "React",
+        "Vite",
+        "Gemini AI",
+        "WhatsApp"
+      ],
       "demoUrl": "https://vinosderemate.netlify.app/",
       "repoUrl": "",
       "featured": true,
-      "order": 1
+      "order": 1,
+      "images": [
+        "images/vinosderemate-1.png",
+        "images/vinosderemate-2.png"
+      ],
+      "image": "images/vinosderemate-1.png"
     },
     {
       "id": "conciliacion",
       "title": "Conciliación bancaria",
       "summary": "Sistema empresarial para cruzar movimientos bancarios y asientos contables, reduciendo errores manuales y acelerando el cierre diario.",
       "description": "Plataforma de conciliación bancaria orientada a operaciones reales de empresa: importación de extractos, matching de movimientos, alertas de diferencias y reportes para el área financiera.",
-      "stack": ["Java", "Spring Boot", "SQL", "React"],
-      "image": "",
+      "stack": [
+        "Java",
+        "Spring Boot",
+        "SQL",
+        "React"
+      ],
       "demoUrl": "",
       "repoUrl": "",
       "featured": true,
-      "order": 2
+      "order": 2,
+      "images": []
     },
     {
       "id": "stock",
       "title": "Stock e inventario móvil",
       "summary": "Plataforma de inventario con dispositivos celulares para cargar, consultar y sincronizar stock en tiempo real desde el depósito o el piso de venta.",
       "description": "Sistema de control de stock e inventario con app móvil (Capacitor) para operarios: altas, bajas, transferencias y consultas en campo, conectadas a un backend centralizado.",
-      "stack": ["React", "Capacitor", "Java", "SQL"],
-      "image": "",
+      "stack": [
+        "React",
+        "Capacitor",
+        "Java",
+        "SQL"
+      ],
       "demoUrl": "",
       "repoUrl": "",
       "featured": true,
-      "order": 3
+      "order": 3,
+      "images": []
     },
     {
       "id": "multicam",
       "title": "Estudio multicámara móvil",
       "summary": "App de escritorio tipo estudio de grabación: filma con varios celulares a la vez y coordina tomas multicámara desde una sola consola.",
       "description": "Plataforma Electron para dirigir una sesión multicámara usando smartphones como cámaras. Control centralizado de grabación, sincronización y flujo de trabajo pensado para producción ágil.",
-      "stack": ["Electron", "React", "Capacitor", "JavaScript"],
-      "image": "",
+      "stack": [
+        "Electron",
+        "React",
+        "Capacitor",
+        "JavaScript"
+      ],
       "demoUrl": "",
       "repoUrl": "",
       "featured": true,
-      "order": 4
+      "order": 4,
+      "images": []
     },
     {
       "id": "malestar",
       "title": "Dr Malestar — sitio oficial",
       "summary": "Sitio oficial de la banda con área pública para fans y panel de administración con login: desde ahí se publican shows, fotos y novedades sin tocar código.",
       "description": "Web para Dr Malestar con dos caras: la página pública muestra identidad, galería, fechas y redes; y una sección de admin protegida con login permite cargar y publicar contenido de forma autónoma, manteniendo el sitio siempre actualizado.",
-      "stack": ["HTML", "CSS", "JavaScript"],
-      "image": "",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
       "demoUrl": "https://drmalestar.netlify.app/",
       "repoUrl": "",
       "featured": false,
-      "order": 5
+      "order": 5,
+      "images": [
+        "images/malestar.png"
+      ]
     }
   ]
 }
-
