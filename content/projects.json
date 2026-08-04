@@ -57,7 +57,12 @@
       "repoUrl": "",
       "featured": true,
       "order": 3,
-      "images": []
+      "images": [
+        "images/stock-1.png",
+        "images/stock-2.png",
+        "images/stock-3.png"
+      ],
+      "image": "images/stock-1.png"
     },
     {
       "id": "multicam",
@@ -74,7 +79,11 @@
       "repoUrl": "",
       "featured": true,
       "order": 4,
-      "images": []
+      "images": [
+        "images/multicam-1.png",
+        "images/multicam-2.png"
+      ],
+      "image": "images/multicam-1.png"
     },
     {
       "id": "malestar",
@@ -91,8 +100,11 @@
       "featured": false,
       "order": 5,
       "images": [
-        "images/malestar.png"
-      ]
+        "images/malestar.png",
+        "images/malestar-2.png",
+        "images/malestar-3.png"
+      ],
+      "image": "images/malestar.png"
     }
   ]
 }
