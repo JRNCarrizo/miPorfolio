@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV — Jorge R. N. Carrizo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Figtree:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #0c1a22;
+        --muted: #3a505c;
+        --accent: #03678e;
+        --accent-deep: #024a66;
+        --line: #d5e1e8;
+        --chip: #e4f1f6;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      @page {
+        size: A4;
+        margin: 11mm 13mm;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        color: var(--ink);
+        background: #fff;
+        font-family: 'Figtree', system-ui, sans-serif;
+        font-size: 9.8pt;
+        line-height: 1.4;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page {
+        width: 184mm;
+        margin: 0 auto;
+      }
+
+      .highlights {
+        display: grid;
+        gap: 0.22rem;
+        margin-bottom: 0.75rem;
+        padding: 0.55rem 0.7rem;
+        border: 1px solid var(--line);
+        border-left: 3px solid var(--accent);
+        background: #f7fbfd;
+        border-radius: 0 8px 8px 0;
+      }
+
+      .highlights span {
+        font-size: 0.86rem;
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      .highlights em {
+        font-style: normal;
+        color: var(--accent);
+        font-weight: 700;
+        margin-right: 0.35rem;
+      }
+
+      header {
+        display: grid;
+        gap: 0.22rem;
+        padding-bottom: 0.7rem;
+        border-bottom: 2px solid var(--accent);
+        margin-bottom: 0.7rem;
+      }
+
+      .role {
+        margin: 0;
+        font-family: 'Syne', sans-serif;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      .tech-line {
+        margin: 0;
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--accent-deep);
+      }
+
+      h1 {
+        margin: 0;
+        font-family: 'Syne', sans-serif;
+        font-size: 1.7rem;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        line-height: 1;
+      }
+
+      .contacts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem 0.9rem;
+        margin-top: 0.4rem;
+        font-size: 0.82rem;
+        color: var(--muted);
+      }
+
+      .contacts a {
+        color: var(--accent-deep);
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .contacts .github {
+        color: var(--accent);
+      }
+
+      h2 {
+        margin: 0 0 0.35rem;
+        font-family: 'Syne', sans-serif;
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      section {
+        margin-bottom: 0.65rem;
+      }
+
+      .perfil p {
+        margin: 0;
+      }
+
+      .skills {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.35rem 0.9rem;
+      }
+
+      .skill-block strong {
+        display: block;
+        font-family: 'Syne', sans-serif;
+        font-size: 0.82rem;
+        margin-bottom: 0.14rem;
+        color: var(--accent-deep);
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.22rem;
+      }
+
+      .chips span {
+        background: var(--chip);
+        color: var(--accent-deep);
+        border-radius: 999px;
+        padding: 0.08rem 0.42rem;
+        font-size: 0.74rem;
+        font-weight: 650;
+      }
+
+      .project {
+        margin-bottom: 0.42rem;
+        padding-bottom: 0.35rem;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .project:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      .project h3 {
+        margin: 0;
+        font-family: 'Syne', sans-serif;
+        font-size: 0.92rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      .project .meta {
+        margin: 0.05rem 0 0.12rem;
+        color: var(--accent);
+        font-size: 0.72rem;
+        font-weight: 650;
+      }
+
+      .project p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .edu-list {
+        margin: 0;
+        padding-left: 1rem;
+      }
+
+      .edu-list li {
+        margin-bottom: 0.16rem;
+        color: var(--muted);
+      }
+
+      .edu-list strong {
+        color: var(--ink);
+      }
+
+      .interests {
+        margin: 0;
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 0.85rem;
+      }
+
+      @media screen {
+        body {
+          background: #dce6eb;
+          padding: 24px 12px;
+        }
+
+        .page {
+          width: 210mm;
+          min-height: 297mm;
+          padding: 13mm 14mm;
+          background:
+            radial-gradient(ellipse 70% 40% at 100% 0%, rgba(3, 103, 142, 0.1), transparent 55%),
+            #fff;
+          box-shadow: 0 18px 50px rgba(2, 74, 102, 0.18);
+        }
+
+        .print-hint {
+          max-width: 210mm;
+          margin: 0 auto 12px;
+          font-size: 0.9rem;
+          color: #35505c;
+          text-align: center;
+        }
+      }
+
+      @media print {
+        .print-hint {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p class="print-hint">Vista previa del CV — Imprimir → Guardar como PDF si necesitás regenerarlo.</p>
+    <article class="page">
+      <div class="highlights">
+        <span><em>✓</em> Desarrollo aplicaciones Web, Windows y Android</span>
+        <span><em>✓</em> Especializado en software empresarial</span>
+        <span><em>✓</em> Java · Spring Boot · React · Electron · Capacitor</span>
+      </div>
+
+      <header>
+        <p class="role">Full Stack Developer</p>
+        <h1>Jorge R. N. Carrizo</h1>
+        <p class="tech-line">Java · Spring Boot · React · Electron · Capacitor</p>
+        <div class="contacts">
+          <span>Buenos Aires, Argentina</span>
+          <a href="mailto:jrncarrizo@gmail.com">jrncarrizo@gmail.com</a>
+          <a href="https://wa.me/541138332282">+54 11 3833-2282</a>
+          <a class="github" href="https://github.com/JRNCarrizo">github.com/JRNCarrizo</a>
+          <a href="https://jrncarrizo.netlify.app">jrncarrizo.netlify.app</a>
+          <a href="https://www.linkedin.com/in/jorge-carrizo-aa4919296/">LinkedIn</a>
+        </div>
+      </header>
+
+      <section class="perfil">
+        <h2>Perfil</h2>
+        <p>
+          Desarrollador Full Stack especializado en desarrollar software para optimizar procesos
+          empresariales. Diseño y construyo aplicaciones web, de escritorio y móviles utilizando
+          Java, Spring Boot, React, Electron y Capacitor. Mi enfoque está en crear soluciones
+          escalables, intuitivas y orientadas a resultados. Utilizo herramientas como Cursor e
+          inteligencia artificial para mejorar la productividad y agilizar el desarrollo
+          manteniendo altos estándares de calidad.
+        </p>
+      </section>
+
+      <section>
+        <h2>Stack</h2>
+        <div class="skills">
+          <div class="skill-block">
+            <strong>Backend</strong>
+            <div class="chips">
+              <span>Java</span><span>Spring Boot</span><span>Spring Security</span
+              ><span>JPA / Hibernate</span><span>REST APIs</span>
+            </div>
+          </div>
+          <div class="skill-block">
+            <strong>Frontend</strong>
+            <div class="chips">
+              <span>React</span><span>JavaScript</span><span>TypeScript</span><span>HTML5</span
+              ><span>CSS3</span>
+            </div>
+          </div>
+          <div class="skill-block">
+            <strong>Desktop &amp; Mobile</strong>
+            <div class="chips"><span>Electron</span><span>Capacitor</span></div>
+          </div>
+          <div class="skill-block">
+            <strong>Bases de datos</strong>
+            <div class="chips"><span>PostgreSQL</span><span>MySQL</span><span>SQLite</span></div>
+          </div>
+          <div class="skill-block" style="grid-column: 1 / -1">
+            <strong>Herramientas</strong>
+            <div class="chips">
+              <span>Git</span><span>GitHub</span><span>Cursor</span><span>Vite</span
+              ><span>Python</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Proyectos destacados</h2>
+
+        <div class="project">
+          <h3>Vinos de Remate</h3>
+          <p class="meta">Electron · React · Vite · Gemini AI · WhatsApp</p>
+          <p>
+            Plataforma para gestión y venta de vinos con catálogo online, panel de administración
+            en Electron, control automático de stock, integración con IA para fichas de productos
+            y pedidos mediante WhatsApp.
+          </p>
+        </div>
+
+        <div class="project">
+          <h3>Conciliación bancaria</h3>
+          <p class="meta">Java · Spring Boot · SQL · React</p>
+          <p>
+            Sistema empresarial que automatiza el cruce entre extractos bancarios y asientos
+            contables, reduce errores manuales y acelera el cierre diario financiero.
+          </p>
+        </div>
+
+        <div class="project">
+          <h3>Stock e inventario móvil</h3>
+          <p class="meta">React · Capacitor · Java · SQL</p>
+          <p>
+            Solución de inventario con app móvil para operar en depósito o piso de venta: altas,
+            bajas, transferencias y consultas sincronizadas con un backend central.
+          </p>
+        </div>
+
+        <div class="project">
+          <h3>Estudio multicámara móvil</h3>
+          <p class="meta">Electron · React · Capacitor</p>
+          <p>
+            Aplicación de escritorio que convierte varios celulares en un estudio de grabación
+            multicámara, con control centralizado de tomas y flujo de producción ágil.
+          </p>
+        </div>
+
+        <div class="project">
+          <h3>Dr Malestar — sitio oficial</h3>
+          <p class="meta">HTML · CSS · JavaScript</p>
+          <p>
+            Sitio oficial de la banda con área pública para fans y panel admin con login para
+            publicar shows, fotos y novedades sin depender de un desarrollador.
+          </p>
+        </div>
+      </section>
+
+      <div class="two-col">
+        <section>
+          <h2>Formación</h2>
+          <ul class="edu-list">
+            <li>
+              <strong>Gestión de Bases de Datos</strong> — CFP N° 8 (2024)
+            </li>
+            <li>
+              <strong>Programación Web</strong> — CFP N° 8 (2024)
+            </li>
+            <li>
+              <strong>Ciberseguridad</strong> — CFP N° 8 (en curso)
+            </li>
+            <li>
+              <strong>Programador Java</strong> — CFP N° 8 (2023–2024)
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Intereses profesionales</h2>
+          <p class="interests">
+            Desarrollo Full Stack · Sistemas empresariales · Aplicaciones de escritorio ·
+            Aplicaciones móviles · Arquitectura de software · Automatización de procesos
+          </p>
+        </section>
+      </div>
+    </article>
+  </body>
+</html>
