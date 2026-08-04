@@ -105,6 +105,26 @@
       "image": "images/aulamedia-1.png"
     },
     {
+      "id": "miagenda",
+      "title": "miAgenda",
+      "summary": "Agenda móvil en React Native: eventos con imágenes adjuntas, notificaciones y alarmas programables, bloc de notas y personalización de colores o fondo.",
+      "description": "Aplicación Android hecha con React Native para organizar el día a día. Permite crear eventos con imágenes adjuntas, programar notificaciones y alarmas, llevar un bloc de notas y personalizar la apariencia con colores o imagen de fondo. Pensada para uso cotidiano, offline y con recordatorios a tiempo.",
+      "stack": [
+        "React Native",
+        "Android"
+      ],
+      "demoUrl": "",
+      "repoUrl": "",
+      "featured": true,
+      "order": 6,
+      "images": [
+        "images/miagenda-1.jpeg",
+        "images/miagenda-2.jpeg",
+        "images/miagenda-3.jpeg"
+      ],
+      "image": "images/miagenda-1.jpeg"
+    },
+    {
       "id": "malestar",
       "title": "Dr Malestar — sitio oficial",
       "summary": "Sitio oficial de la banda con área pública para fans y panel de administración con login: desde ahí se publican shows, fotos y novedades sin tocar código.",
@@ -117,7 +137,7 @@
       "demoUrl": "https://drmalestar.netlify.app/",
       "repoUrl": "",
       "featured": false,
-      "order": 6,
+      "order": 7,
       "images": [
         "images/malestar.png",
         "images/malestar-2.png",
