@@ -6,6 +6,7 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Loader from './components/Loader'
 
 async function loadContent() {
   const bust = `t=${Date.now()}`
@@ -53,19 +54,11 @@ export default function App() {
   }, [])
 
   if (error) {
-    return (
-      <main className="container section">
-        <p>{error}</p>
-      </main>
-    )
+    return <Loader error={error} />
   }
 
   if (!data) {
-    return (
-      <main className="container section">
-        <p>Cargando...</p>
-      </main>
-    )
+    return <Loader message="Cargando" />
   }
 
   const { profile, projectsData, skillsData } = data
