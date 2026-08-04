@@ -1,11 +1,7 @@
 import { useReveal } from '../hooks/useReveal'
 import Typewriter from './Typewriter'
+import ProjectMedia from './ProjectMedia'
 import './Projects.css'
-
-function contentUrl(path) {
-  if (!path) return ''
-  return `/content/${path.replace(/^\//, '')}`
-}
 
 export default function Projects({ projectsData }) {
   const { ref, visible } = useReveal(0.08)
@@ -25,48 +21,36 @@ export default function Projects({ projectsData }) {
         </p>
 
         <div className="projects__grid">
-          {projects.map((project, i) => {
-            const img = contentUrl(project.image)
-            const Wrapper = project.demoUrl ? 'a' : 'article'
-            const wrapperProps = project.demoUrl
-              ? {
-                  href: project.demoUrl,
-                  target: '_blank',
-                  rel: 'noreferrer',
-                  className: 'project',
-                }
-              : { className: 'project project--static' }
-
-            return (
-              <Wrapper
-                key={project.id}
-                {...wrapperProps}
-                style={{ transitionDelay: `${i * 60}ms` }}
-              >
-                <div className="project__media">
-                  {img ? (
-                    <img src={img} alt="" loading="lazy" />
-                  ) : (
-                    <div className="project__placeholder">
-                      <span>{project.title.charAt(0)}</span>
-                    </div>
-                  )}
-                </div>
-                <div className="project__body">
-                  <h3>{project.title}</h3>
-                  <p>{project.summary}</p>
-                  <ul className="project__stack">
-                    {(project.stack || []).map((tech) => (
-                      <li key={tech}>{tech}</li>
-                    ))}
-                  </ul>
-                  {project.demoUrl ? (
-                    <span className="project__cta">Ver demo →</span>
-                  ) : null}
-                </div>
-              </Wrapper>
-            )
-          })}
+          {projects.map((project, i) => (
+            <article
+              key={project.id}
+              className="project"
+              style={{ transitionDelay: `${i * 60}ms` }}
+            >
+              <div className="project__media">
+                <ProjectMedia project={project} />
+              </div>
+              <div className="project__body">
+                <h3>{project.title}</h3>
+                <p>{project.summary}</p>
+                <ul className="project__stack">
+                  {(project.stack || []).map((tech) => (
+                    <li key={tech}>{tech}</li>
+                  ))}
+                </ul>
+                {project.demoUrl ? (
+                  <a
+                    className="project__cta"
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Ver demo →
+                  </a>
+                ) : null}
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

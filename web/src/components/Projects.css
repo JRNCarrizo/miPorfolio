@@ -22,25 +22,64 @@
   box-shadow: 0 18px 40px rgba(2, 74, 102, 0.12);
 }
 
-.project--static {
-  cursor: default;
-}
-
 .project__media {
   aspect-ratio: 16 / 10;
   background: #0c1a22;
   overflow: hidden;
+  position: relative;
 }
 
-.project__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+.project__slideshow {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 0.65rem;
 }
 
-.project:hover .project__media img {
-  transform: scale(1.04);
+.project__slideshow img {
+  position: absolute;
+  inset: 0.65rem;
+  width: calc(100% - 1.3rem);
+  height: calc(100% - 1.3rem);
+  margin: auto;
+  object-fit: contain;
+  object-position: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.85s ease;
+}
+
+.project__slideshow img.is-active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.project__dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.7rem;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  gap: 0.45rem;
+  pointer-events: auto;
+}
+
+.project__dots button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+}
+
+.project__dots button.is-active {
+  background: #fff;
+  transform: scale(1.2);
 }
 
 .project__placeholder {
@@ -98,10 +137,17 @@
 }
 
 .project__cta {
+  display: inline-flex;
+  width: fit-content;
   font-family: var(--font-display);
   font-weight: 650;
   font-size: 0.88rem;
   color: var(--accent);
+  text-decoration: none;
+}
+
+.project__cta:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 760px) {
@@ -111,8 +157,11 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .project:hover,
-  .project:hover .project__media img {
+  .project:hover {
     transform: none;
+  }
+
+  .project__slideshow img {
+    transition: opacity 0.25s ease;
   }
 }
