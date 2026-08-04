@@ -26,7 +26,7 @@ export default function ProjectMedia({ project }) {
 
     const id = window.setInterval(() => {
       setIndex((current) => (current + 1) % images.length)
-    }, 3200)
+    }, 5500)
 
     return () => window.clearInterval(id)
   }, [imageKey, images.length])
