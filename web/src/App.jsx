@@ -1,27 +1,21 @@
 import { useEffect, useState } from 'react'
-import Nav from './components/Nav'
-import Hero from './components/Hero'
-import About from './components/About'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import Console from './components/Console'
 import Loader from './components/Loader'
 
 async function loadContent() {
   const bust = `t=${Date.now()}`
   const [profile, projectsData, skillsData] = await Promise.all([
-    fetch(`/content/profile.json?${bust}`).then((r) => {
-      if (!r.ok) throw new Error('No se pudo cargar el perfil')
-      return r.json()
+    fetch(`/content/profile.json?${bust}`).then((response) => {
+      if (!response.ok) throw new Error('No se pudo cargar el perfil')
+      return response.json()
     }),
-    fetch(`/content/projects.json?${bust}`).then((r) => {
-      if (!r.ok) throw new Error('No se pudieron cargar los proyectos')
-      return r.json()
+    fetch(`/content/projects.json?${bust}`).then((response) => {
+      if (!response.ok) throw new Error('No se pudieron cargar los proyectos')
+      return response.json()
     }),
-    fetch(`/content/skills.json?${bust}`).then((r) => {
-      if (!r.ok) throw new Error('No se pudieron cargar las skills')
-      return r.json()
+    fetch(`/content/skills.json?${bust}`).then((response) => {
+      if (!response.ok) throw new Error('No se pudieron cargar las skills')
+      return response.json()
     }),
   ])
 
@@ -53,27 +47,8 @@ export default function App() {
     }
   }, [])
 
-  if (error) {
-    return <Loader error={error} />
-  }
+  if (error) return <Loader error={error} />
+  if (!data) return <Loader message="Cargando" />
 
-  if (!data) {
-    return <Loader message="Cargando" />
-  }
-
-  const { profile, projectsData, skillsData } = data
-
-  return (
-    <>
-      <Nav name={profile.shortName} />
-      <main>
-        <Hero profile={profile} />
-        <About profile={profile} />
-        <Skills skillsData={skillsData} />
-        <Projects projectsData={projectsData} />
-        <Contact profile={profile} />
-      </main>
-      <Footer profile={profile} />
-    </>
-  )
+  return <Console profile={data.profile} projectsData={data.projectsData} skillsData={data.skillsData} />
 }
