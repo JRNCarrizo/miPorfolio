@@ -108,7 +108,7 @@ a {
 .keys-hint {
   position: fixed;
   left: 16px;
-  bottom: 16px;
+  bottom: 56px;
   z-index: 45;
   display: flex;
   flex-direction: column;
@@ -203,7 +203,7 @@ a {
 @media (max-width: 720px) {
   .keys-hint {
     left: 10px;
-    bottom: calc(10px + env(safe-area-inset-bottom));
+    bottom: calc(48px + env(safe-area-inset-bottom));
   }
 }
 
