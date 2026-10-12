@@ -1,8 +1,40 @@
 {
   "label": "Proyectos",
   "title": "Soluciones desarrolladas para resolver problemas reales",
-  "intro": "Cada proyecto nace de una necesidad concreta: optimizar procesos, automatizar tareas y facilitar el trabajo de las personas. Desde sistemas de conciliación bancaria y control de stock hasta aplicaciones de escritorio, plataformas de gestión y herramientas móviles, mi enfoque está puesto en crear software confiable, intuitivo y preparado para crecer.",
+  "intro": "Cada proyecto nace de una necesidad concreta: optimizar procesos, automatizar tareas y facilitar el trabajo de las personas. Desde turnos de muelle, conciliación bancaria y control de stock hasta aplicaciones de escritorio, acceso a cámaras y herramientas móviles, mi enfoque está puesto en crear software confiable, intuitivo y preparado para crecer.",
   "projects": [
+    {
+      "id": "turnero",
+      "title": "Turnero de muelles",
+      "summary": "Sistema de turnos con panel de la empresa y panel del proveedor. Asigna el turno según el muelle libre, el tipo de carga y el transporte, y respeta la condición de pago y el presupuesto semanal.",
+      "description": "Dos interfaces para operar la misma cola de turnos: la empresa administra muelles, tipos de carga, transporte y el presupuesto de la semana; el proveedor pide el turno desde su panel. El sistema asigna el cupo según el muelle disponible para ese tipo de carga y de transporte. También tiene en cuenta la condición de pago de cada proveedor —por ejemplo, a 15 días u otro plazo— y cuánto presupuesto queda esa semana, para no comprometer más de lo que la empresa puede absorber.",
+      "stack": [
+        "React",
+        "Java",
+        "Spring Boot",
+        "SQL"
+      ],
+      "demoUrl": "",
+      "repoUrl": "",
+      "featured": true,
+      "order": 1,
+      "images": []
+    },
+    {
+      "id": "camaras",
+      "title": "App de cámaras",
+      "summary": "App móvil que se conecta a una plataforma central de cámaras y desde ahí accede a las cámaras, aunque cada una use un software distinto.",
+      "description": "Aplicación móvil de consulta de cámaras. No habla con cada equipo por separado: se conecta a un sistema central, una plataforma de cámaras, y desde ahí accede a las imágenes. Esa plataforma integra distintos softwares de videovigilancia, de modo que la app tiene un solo punto de acceso aunque las cámaras provengan de fabricantes diferentes.",
+      "stack": [
+        "Capacitor",
+        "Android"
+      ],
+      "demoUrl": "",
+      "repoUrl": "",
+      "featured": true,
+      "order": 2,
+      "images": []
+    },
     {
       "id": "vinosderemate",
       "title": "Vinos de Remate",
@@ -18,7 +50,7 @@
       "demoUrl": "https://vinosderemate.netlify.app/",
       "repoUrl": "",
       "featured": true,
-      "order": 1,
+      "order": 3,
       "images": [
         "images/vinosderemate-1.png",
         "images/vinosderemate-2.png"
@@ -39,7 +71,7 @@
       "demoUrl": "",
       "repoUrl": "",
       "featured": true,
-      "order": 2,
+      "order": 4,
       "images": []
     },
     {
@@ -56,7 +88,7 @@
       "demoUrl": "",
       "repoUrl": "",
       "featured": true,
-      "order": 3,
+      "order": 5,
       "images": [
         "images/stock-1.png",
         "images/stock-2.png",
@@ -78,7 +110,7 @@
       "demoUrl": "",
       "repoUrl": "",
       "featured": true,
-      "order": 4,
+      "order": 6,
       "images": [
         "images/multicam-1.png",
         "images/multicam-2.png"
@@ -97,7 +129,7 @@
       "demoUrl": "",
       "repoUrl": "",
       "featured": true,
-      "order": 5,
+      "order": 7,
       "images": [
         "images/aulamedia-1.png",
         "images/aulamedia-2.png"
@@ -116,7 +148,7 @@
       "demoUrl": "",
       "repoUrl": "",
       "featured": true,
-      "order": 6,
+      "order": 8,
       "images": [
         "images/miagenda-1.jpeg",
         "images/miagenda-2.jpeg",
@@ -137,7 +169,7 @@
       "demoUrl": "https://drmalestar.netlify.app/",
       "repoUrl": "",
       "featured": false,
-      "order": 7,
+      "order": 9,
       "images": [
         "images/malestar.png",
         "images/malestar-2.png",
